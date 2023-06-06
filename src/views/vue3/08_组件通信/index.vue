@@ -9,7 +9,8 @@ const toPath = (x:string) => {
 
 <template>
   <div class="flex nav">
-    <el-button @click="toPath('/home/vue-study/ref/component_communication/props') " type="primary" round>props</el-button>
+    <el-button @click="toPath('/home/vue-study/component_communication/props') " type="primary" round>props</el-button>
+    <el-button @click="toPath('/home/vue-study/component_communication/event_bus') " type="primary" round>兄弟组件通信</el-button>
 
   </div>
   <div class="m20">

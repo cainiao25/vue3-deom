@@ -14,7 +14,8 @@ const toRefs = () => import('../views/vue3/04_toRefs/index.vue')
 const pinia = () => import('../views/vue3/05_pinia的使用/index.vue')
 //08
 const component_communication = () => import('../views/vue3/08_组件通信/index.vue')
-const props = () => import('../views/vue3/08_组件通信/props/index.vue')
+const props = () => import('../views/vue3/08_组件通信/01_props/index.vue')
+const event_bus = () => import('../views/vue3/08_组件通信/02_兄弟组件event-bus/index.vue')
 // 猫眼电影
 const maoyan = () => import('../views/猫眼电影/index.vue')
 // 两种方法
@@ -97,6 +98,10 @@ const routes :Array<RouteRecordRaw>= [
               {
                 path: 'props',
                 component:props
+              },
+              {
+                path: 'event_bus',
+                component:event_bus
               },
             ]
           },
