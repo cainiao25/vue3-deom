@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router"
 import type { RouteRecordRaw } from "vue-router"
 
 const login = () => import('../views/login.vue')
-// vue学习
+// vue3学习
 const vueStudy = () => import('../views/vue3/index.vue')
 const ref = () => import('../views/vue3/06_ref/ref.vue')
 const home = () => import('../views/home.vue')
@@ -13,6 +13,7 @@ const definitionHook = () => import('../views/vue3/03_自定义hook/index.vue')
 const toRefs = () => import('../views/vue3/04_toRefs/index.vue')
 const pinia = () => import('../views/vue3/05_pinia的使用/index.vue')
 const component_communication = () => import('../views/vue3/08_组件通信/index.vue')
+
 // 猫眼电影
 const maoyan = () => import('../views/猫眼电影/index.vue')
 // 两种方法
