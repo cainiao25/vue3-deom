@@ -12,6 +12,7 @@ const calculate = () => import('../views/vue3/02_计算属性和监视/index.vue
 const definitionHook = () => import('../views/vue3/03_自定义hook/index.vue')
 const toRefs = () => import('../views/vue3/04_toRefs/index.vue')
 const pinia = () => import('../views/vue3/05_pinia的使用/index.vue')
+const component_communication = () => import('../views/vue3/08_组件通信/index.vue')
 // 猫眼电影
 const maoyan = () => import('../views/猫眼电影/index.vue')
 // 两种方法
@@ -53,7 +54,7 @@ const routes :Array<RouteRecordRaw>= [
           // 重定向要写完整路径
           {
             path: "",
-            redirect: "/home/vue-study/ref"
+            redirect: "/ref"
           },
           {
             path: "ref",
@@ -82,6 +83,16 @@ const routes :Array<RouteRecordRaw>= [
           {
             path: "pinia",
             component: pinia
+          },
+          {
+            path: "component_communication",
+            component: component_communication,
+            children:[
+              {
+                path:'',
+                redirect:'/props'
+              }
+            ]
           },
         ]
       },

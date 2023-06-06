@@ -16,6 +16,7 @@ const toPath = (x:string) => {
     <el-button @click="toPath('/home/vue-study/definitionHook') " type="primary" round>自定义hoo</el-button>
     <el-button @click="toPath('/home/vue-study/toRefs') " type="primary" round>toRefs</el-button>
     <el-button @click="toPath('/home/vue-study/pinia') " type="primary" round>pinia的使用</el-button>
+    <el-button @click="toPath('/home/vue-study/component_communication') " type="primary" round>组件通信</el-button>
   </div>
   <div class="m20">
     <router-view/>

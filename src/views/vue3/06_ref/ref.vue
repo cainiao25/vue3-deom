@@ -4,7 +4,19 @@
 // ref内部：通过给value属性添加getter/setter来实现对数据的劫持
 // reactive内部：通过使用proxy来实现对对象内部所有数据的劫持，并通过Reflect操作对象内部数据
 // ref的数据操作：在js中要.value，在模板中不需要（内部解析模板时会自动添加.value）
-import { ref,onMounted } from 'vue';
+import { ref,onMounted,reactive } from 'vue';
+import * as $axios from '../../../api/baseUrls_3/index'
+const favorcities:any =ref({})
+const data:any = []
+$axios.$home(data).then((res:any) => {
+    favorcities.value = res
+    console.log(res,'接口数据');
+    console.log(favorcities.value.data.data.items,'favorcities333');
+  })
+  
+  console.log(favorcities.value,'favorcities444');
+  
+  const item = ref([11,22,33])
   let count = ref(0)
 
   // ref中如果放入的是一个对象，那么是经过了reactive的处理，形成了一个propxy的类型对象
@@ -32,6 +44,14 @@ import { ref,onMounted } from 'vue';
 </script>
 
 <template>
+  <p>{{ item }}</p>
+  <div>
+    <ul>
+      <li v-for="item in favorcities">
+        {{ item.address }}
+      </li>
+    </ul>
+  </div>
   <div>
     <h2>setup和ref的基本使用</h2>
     <p>姓名：{{ user.name }}</p>
